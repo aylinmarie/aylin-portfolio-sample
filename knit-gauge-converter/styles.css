@@ -1,0 +1,164 @@
+/* Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #fdf6f0;
+  color: #3a2e2a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: #b85c6e;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: 640px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #b85c6e;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #7a6a65;
+  margin-bottom: 1.25rem;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5a4a45;
+}
+
+.input-group input {
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: #fdf6f0;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #b85c6e;
+}
+
+.arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #b85c6e;
+  margin: -0.25rem 0 0.5rem;
+}
+
+/* Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
+}
+
+.grid-2 .input-group:first-child {
+  grid-column: 1 / -1;
+}
+
+/* Button */
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #b85c6e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #a04d5e;
+}
+
+/* Result */
+.result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fdf0f3;
+  border-left: 4px solid #b85c6e;
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+}
+
+.result.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #9a8a85;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 .input-group:first-child {
+    grid-column: 1;
+  }
+}
