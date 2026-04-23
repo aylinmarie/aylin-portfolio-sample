@@ -8,7 +8,7 @@ import Banner from '../../components/Banner'
 
 import Grid from '@material-ui/core/Grid';
 
-import stylesheet from './Portfolio.module.less'
+import * as stylesheet from './Portfolio.module.less'
 
 const Portfolio = ({data}) => {
   return (

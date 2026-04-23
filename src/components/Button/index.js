@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import cx from 'classnames';
-import stylesheet from './Button.module.less';
+import * as stylesheet from './Button.module.less';
 
 const Button = ({ children, href, onClick, type, ...rest }) => {
   const classList = cx(stylesheet.root, stylesheet[type]);

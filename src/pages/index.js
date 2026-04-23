@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Layout from "../components/layout"
 import Button from "../components/Button"
 import SEO from "../components/seo"
-import stylesheet from './home/Home.module.less';
+import * as stylesheet from './home/Home.module.less';
 
 // Section Illustrations
 import accent0 from '../images/travel_accent.svg';

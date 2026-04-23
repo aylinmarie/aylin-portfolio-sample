@@ -28,6 +28,15 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-less`
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    }
   ],
 }

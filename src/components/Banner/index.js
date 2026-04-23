@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import stylesheet from './Banner.module.less';
+import * as stylesheet from './Banner.module.less';
 
 const Banner = ({ children}) => {
   
