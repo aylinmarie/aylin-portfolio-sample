@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Grid from '@material-ui/core/Grid';
 
 import Layout from "../components/layout"
 import Button from "../components/Button"
 import SEO from "../components/seo"
-import stylesheet from './home/Home.module.less';
+import * as stylesheet from './home/Home.module.less';
 
 // Section Illustrations
 import accent0 from '../images/travel_accent.svg';
@@ -24,11 +24,11 @@ const IndexPage = ({ data }) => {
         <Grid container spacing={10}>
           <Grid item xs={12} sm={5}>
             <h1>Merhaba, I'm Aylin</h1>
-            <p className="caption">I’m an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
+            <p className="caption">I'm an Atlanta based designer and developer who loves creating clean and minimal designs.</p>
             <Button type="primary" href="/about">About Me</Button>
           </Grid>
           <Grid item xs={12} sm={7}>
-            <Img fluid={mainPic.childImageSharp.fluid} alt="Headshot of Aylin" />
+            <GatsbyImage image={getImage(mainPic)} alt="Headshot of Aylin" />
           </Grid>
         </Grid>
       </section>
@@ -36,8 +36,8 @@ const IndexPage = ({ data }) => {
       <section id="travel" className={stylesheet.portfolio}>
         <Grid container spacing={10}>
           <Grid item xs={12} sm={7}>
-            <Img fluid={portfolioPic.childImageSharp.fluid} alt="Camille Simone brand desktop view" />
-            <Img fluid={portfolioPic2.childImageSharp.fluid} alt="Camille Simone brand mobile view" />
+            <GatsbyImage image={getImage(portfolioPic)} alt="Camille Simone brand desktop view" />
+            <GatsbyImage image={getImage(portfolioPic2)} alt="Camille Simone brand mobile view" />
           </Grid>
           <Grid item xs={12} sm={5}>
             <h2>Portfolio</h2>
@@ -52,13 +52,13 @@ const IndexPage = ({ data }) => {
         <Grid container spacing={10}>
           <Grid item xs={12} sm={5}>
             <h2>Travel</h2>
-            <p className="caption">A few snapshots of where I’ve been</p>
-            <Button type="primary" 
+            <p className="caption">A few snapshots of where I've been</p>
+            <Button type="primary"
               href="https://vsco.co/aylin-marie/journal/p/1" target="_blank" rel="noreferrer">Travel Journal</Button>
             <img className={stylesheet.accent1} src={accent1} alt="" />
           </Grid>
           <Grid item xs={12} sm={7}>
-            <Img fluid={travelPic.childImageSharp.fluid} alt="Winslow building in Helsinki, Finland" />
+            <GatsbyImage image={getImage(travelPic)} alt="Winslow building in Helsinki, Finland" />
             <img className={stylesheet.accent2} src={accent2} alt="" />
           </Grid>
         </Grid>
@@ -74,13 +74,7 @@ query HomeQuery {
     id
     base
     childImageSharp {
-      fluid {
-        base64 
-        aspectRatio 
-        src 
-        srcSet 
-        sizes 
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 
@@ -88,13 +82,7 @@ query HomeQuery {
     id
     base
     childImageSharp {
-      fluid {
-        base64 
-        aspectRatio 
-        src 
-        srcSet 
-        sizes 
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 
@@ -102,13 +90,7 @@ query HomeQuery {
     id
     base
     childImageSharp {
-      fluid {
-        base64 
-        aspectRatio 
-        src 
-        srcSet 
-        sizes 
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 
@@ -116,13 +98,7 @@ query HomeQuery {
     id
     base
     childImageSharp {
-      fluid {
-        base64 
-        aspectRatio 
-        src 
-        srcSet 
-        sizes 
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 }

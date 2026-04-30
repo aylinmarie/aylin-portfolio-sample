@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Header from "./header"
 import '../styles/global.less'
-import stylesheet from  "./layout.module.less"
+import * as stylesheet from "./layout.module.less"
 
 const Layout = ({ children }) => {
 

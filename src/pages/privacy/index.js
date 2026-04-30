@@ -4,7 +4,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Banner from '../../components/Banner'
 
-import stylesheet from './Privacy.module.less';
+import * as stylesheet from './Privacy.module.less';
 
 const PrivacyPage = () => (
   <Layout>

@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,6 +28,15 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-less`
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    }
   ],
 }
